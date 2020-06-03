@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!-- Incluir elementos HTML dinamicamente -->
+       <div id="app">          
+
+       </div>
+
+    
+       <script>
+           // Nome
+           var inputNome = document.createElement('input');
+           inputNome.setAttribute('type', 'text');
+           inputNome.setAttribute('id', 'nome');
+           inputNome.setAttribute('placeholder', 'Digite o nome');
+
+           var buttonNome = document.createElement('input');
+           buttonNome.setAttribute('type', 'button');
+           buttonNome.setAttribute('value', 'Salvar');
+           buttonNome.setAttribute('class', 'botaoNome');
+
+           // Email
+           var inputEmail = document.createElement('input');
+           inputEmail.setAttribute('type', 'Email');
+           inputEmail.setAttribute('id', 'email');
+
+           var buttonEmail = document.createElement('input');
+           buttonEmail.setAttribute('type', 'button');
+           buttonEmail.setAttribute('value', 'Salvar');
+           buttonEmail.setAttribute('class', 'botaoEmail');
+
+           var contentElement = document.querySelector('#app');
+           contentElement.appendChild(inputNome);
+           contentElement.appendChild(buttonNome);
+           contentElement.appendChild(inputEmail);
+           contentElement.appendChild(buttonEmail);
+           
+
+            var btnSalvarNome = document.querySelector('input.botaoNome');
+            btnSalvarNome.onclick = function(){
+                alert(document.querySelector('input#nome').value);
+            }
+
+            
+            var btnSalvarNome = document.querySelector('input.botaoEmail');
+            btnSalvarNome.onclick = function(){
+                alert(document.querySelector('input#email').value);
+            }
+           
+       </script>
+
+
+    </body>
+</html>

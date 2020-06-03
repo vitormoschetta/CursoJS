@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!-- VAMOS TIRAR OS EVENTOS JAVASCRIPT DO CORPO HTML-->
+       <div id="app">
+           <input type="text" id="nome" name="nome"/>
+           <input type="button" value="Salvar" class="botaoNome" />
+           <input type="text" id="email" name="email" />
+           <input type="button" value="Salvar" class="botaoEmail"/>
+
+       </div>
+
+    
+       <script>
+            var btnSalvarNome = document.querySelector('input.botaoNome')
+            btnSalvarNome.onclick = function(){
+                alert(document.querySelector('input#nome').value);
+            }
+
+            var btnSalvarNome = document.querySelector('input.botaoEmail')
+            btnSalvarNome.onclick = function(){
+                alert(document.querySelector('input#email').value);
+            }
+
+           
+       </script>
+
+
+    </body>
+</html>
