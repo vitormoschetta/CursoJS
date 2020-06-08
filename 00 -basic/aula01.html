@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+
+
+    
+        <script>
+            console.log("______________________ STRING ______________________");
+            var str = "Hello, bom dia";
+            console.log(str);
+            console.log(str.length + " caracteres");
+            console.log("'" + str.charAt(0) + "' é o primeiro caractere");
+            console.log(str.replace("bom dia","boa tarde") + " => troquei o texto com replace");
+            console.log(str.toUpperCase() + " => tudo mara maiúsculo com toUpperCase");
+            
+            console.log("______________________ UNDEFINE ______________________");
+            var x;
+            console.log(x); // undefined
+            
+            console.log("______________________ BOOLEAN  ______________________");
+            var a = 1;
+            var b = 0;
+            var c = "";
+            var d = "a";
+            console.log(Boolean(a));
+            console.log(Boolean(b));
+            console.log(Boolean(c));
+            console.log(Boolean(d));
+
+            console.log("______________________ CONCATENAR ______________________");
+            console.log(3 + 4 + 5); // 12   
+            console.log(3 + 4 + "5"); // 75
+            console.log("3" + 4 + 5); // 345
+            
+            console.log("______________________ COMPARACAO ______________________");
+            console.log(1 == "1"); // true
+            console.log(1 === "1"); // false
+            
+            console.log("______________________ OP TERNARIO ______________________");
+            var idade = 17;
+            var permissao = (idade > 18) ? "Permitir" : "Bloquear";
+            console.log(permissao);
+            
+            console.log("______________________ OBJECT ______________________");
+            var obj = new Object();
+            var obj2 = {}; // segunda forma de crair objeto vazio
+            console.log(obj);
+            console.log(obj2);
+
+            obj.name = "Vitor"; // atribuindo valor
+            console.log(obj);
+
+            var obj3 = { // criando objeto já com valor
+                name: "cris",
+                idade: "35",
+                phone: "",
+            }
+            console.log(obj3);
+
+            obj3.phone = "993827879"; // atribuindo valor a propriedade iniciada vazia
+            console.log(obj3);
+
+            var pessoa = {
+                name: "Melqui",
+                idade: "7",
+                endereco: {
+                    rua: "Tucuruí",
+                    bairro: "Cidade Nova",
+                    cidade: "Porto Velho",
+                    uf: "Rondonia",
+                }
+            }                    
+            console.log(pessoa);
+
+            
+            console.log("______________________ VETOR ______________________");
+            var vetor = new Array();
+            vetor[0] = "valor01";
+            vetor[1] = "valor02";
+            vetor[2] = "valor03";
+            console.log(vetor);
+            console.log(vetor.length);
+            
+            var vetor2 = new Array();
+            vetor2[0] = "valor01";
+            vetor2[1] = "valor02";
+            vetor2[100] = "valor03";
+            console.log(vetor2);
+            console.log(vetor2.length); // lenght representa o maior indice do vetor
+
+            for (var i = 0; i < vetor.length; i++) {
+                console.log(vetor[i]);              
+            }
+            
+            for (var i in vetor) {
+                console.log(vetor[i]);
+            }
+
+            
+            console.log("______________________ FUNÇÃO ______________________");
+            function Add(x, y) {
+                var total = x + y;
+                return total;
+            }
+            console.log(Add(5,2));
+            
+            // usando atributo 'arguments' podemos passar quantos valores quisermos 
+            function Add2() {
+                var sum = 0;
+                for (var i = 0; i < arguments.length; i++){
+                    sum = sum + arguments[i];
+                }
+                return sum;
+            }
+            console.log(Add2(5,3));
+            console.log(Add2(5,3,2));
+            console.log(Add2.apply(null, [2,3,1]));
+
+
+            console.log("______________ CLASSES / FUNCTION ___________________");
+            function Pessoa(nome, idade){
+                return {
+                    nome,
+                    idade,
+                    
+                    DadosCompletos: function() {
+                        return nome + "; " + idade + " anos";
+                    }
+                }
+            }
+            var pessoa = new Pessoa("Vitor", "31");
+            console.log(pessoa);
+            console.log(pessoa.DadosCompletos());
+            
+
+            // usando 'this' para acessar propriedades mesmo fora do escopo:
+            function DadosCompletos() {
+                return this.nome + "; " + this.idade + " anos";
+            }
+            function Pessoa2(nome, idade) {
+                this.nome = nome;
+                this.idade = idade;
+                this.DadosCompletos = DadosCompletos;
+            }
+            var pessoa2 = new Pessoa2("Cris", "35");
+            console.log(pessoa2.DadosCompletos());
+
+            // Usando prototype para adicionar metodos em tempo de execucao:
+            Pessoa2.prototype.DadosCompletos2 = function() {
+                return this.nome + "; " + this.idade + " anos de idade";
+            }
+            var pessoa3 = new Pessoa2("Quellme", "12");
+            console.log(pessoa3.DadosCompletos2());
+            
+          
+        
+
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+        </script>
+
+
+    </body>
+</html>
