@@ -13,7 +13,7 @@
     <body>
         <div id="App">
             <div class="col-2">
-                <input type="text" id="valor01" value="50,00" onfocus="EntradaInput('valor01', this.value)" onblur="SaidaInput('valor01', this.value)" 
+                <input type="text" id="valor01" value="50,00" onfocus="EntradaInput(this.id, this.value)" onblur="SaidaInput(this.id, this.value)" 
                     onkeypress="$(this).mask('000.000.000,00', {reverse: true});" class="form-control"/>
             </div>
             
