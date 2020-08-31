@@ -12,18 +12,18 @@
         
         <div id="app"></div>
         
-        <script>
-           class Pessoa {
-               constructor(nome, idade) {
-                   this.nome = nome;
-                   this.idade = idade;
-               }               
-           }
+        <script>          
             
            var lista = [];
 
            for (let index = 0; index < 10; index++) {
-               var pessoa = new Pessoa('nome'+index, '2'+index);
+
+               // objeto generico
+               var pessoa = new Object();   // => dessa forma podemos adicionar quantas e quais propriedades quisermos
+
+               pessoa.nome = 'nome'+index;
+               pessoa.idade =  '2'+index;
+               
                lista.push(pessoa);               
            }
 
