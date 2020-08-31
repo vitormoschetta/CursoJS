@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+       
+    </head>
+    <body>
+        
+        
+        <div id="app"></div>
+        
+        <script>
+           class Pessoa {
+               constructor(nome, idade) {
+                   this.nome = nome;
+                   this.idade = idade;
+               }               
+           }
+            
+           var lista = [];
+
+           for (let index = 0; index < 10; index++) {
+               var pessoa = new Pessoa('nome'+index, '2'+index);
+               lista.push(pessoa);               
+           }
+
+           console.log(lista);
+        </script>
+    </body>
+</html>
